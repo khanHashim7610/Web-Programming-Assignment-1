@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta name="viewport" content="width=device-width, initial scale=1.0">
+			<title>JOB FORM RESUME</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+			<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class = "container">
+			<h1>Job Application Form</h1>
+			<form id="jobApplicationForm" onsubmit="submitForm(event)">
+			<h2>Full Name</h2>
+      		<div class="namee">
+      			<h5>First Name</h5>
+        		<input type="text" id="firstName" placeholder="First Name" required>
+        		<h5>Last Name</h5>	
+        		<input type="text" id="lastName" placeholder="Last Name" required>
+      		</div>
+      		<h2>Contact Information</h2>
+      		<div class ="contactinfo">
+      			<input type="tel" id="phone" placeholder="Phone Number" required>
+        		<input type="email" id="email" placeholder="Email Address" required>
+        	</div>
+        	<h2>Address</h2>
+        	<div class="address">
+        		<h5>Street</h5>
+        		<input type="text" id="street"  placeholder="Street" required>
+        		<h5>City</h5>
+        		<input type="text" id="city" placeholder="City" required>
+        		<h5>State</h5>
+        		<input type="text" id="state" placeholder="State" required>
+        		<h5>Zip Code</h5>
+        		<input type="text" id="zip" placeholder="ZIP Code" required>
+      		</div>
+      		<h2>Education</h2>
+      		<div class="education">
+      			<label>
+      				<input type="radio" name="education" value="High School" required>
+      				HighSchool
+      			</label>
+      			<label>
+      				<input type="radio" name="education" value="Bachelors">
+      				Bachelors
+      			</label>
+      			<label>
+      				<input type="radio" name="education" value="Masters">
+      				Masters
+      			</label>
+      			<label>
+      				<input type="radio" name="education" value="PHD">
+      				PHD
+      			</label>
+      			<h5>Name of the Institute</h5>
+      			<input type="text" id="institute" placeholder="Institute Name" required>
+      			<h5>Major</h5>
+      			<input type="text" id="major" placeholder="Major" required>
+      			<h5>Graduation Date</h5>
+      			<input type="date" id="graddate" name="Graduation Date" required>
+      		</div>
+      		<h2>Cover-Letter & Resume</h2>
+      		<div class="Resume">
+        		<input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      		</div>
+      		<div class="coverletter">
+        		<textarea id="coverLetter" name="coverLetter" placeholder="Cover Letter" required></textarea>
+      		</div>
+      		<h2>Professional Skills & Certifications</h2>
+      		<div class="skillz">
+      			<h5>Professional Skills</h5>
+        		<textarea id="skillz" name="skillz" placeholder="Professional Skills" required></textarea>
+      		</div>
+      		<div class="certification">
+      			<h5>Certificates</h5>
+        		<input type="file" id="certificates" name="certificates" accept=".pdf,.doc,.docx" required>
+      		</div>
+      		<h2>Job History</h2>
+      		<div class="jobhistory">
+      			<h5>Company Name</h5>
+      			<input type="text" id="compnayName"  placeholder="Company Name" required>
+      			<h5>Start Date</h5>
+      			<input type="date" id="startdate" name="Start Date" required>
+      			<h5>End Date</h5>
+      			<input type="date" id="enddate" name="End Date" required>
+      			<h5>Position</h5>
+      			<input type="text" id="position" placeholder="Position" required>
+      		</div>
+      		<h2>Availability</h2>
+      		<div class="availability">
+      			<h5>Start Date</h5>
+      			<input type ="date" id="sdate" name="Start Date" required>
+      			<h5>Preferred Work Schedule</h5>
+      			<textarea id="ws" name="ws" placeholder="Available Working Days" required></textarea>
+      			<h5>Willingness to Relocate</h5>
+      			<label>
+      				<input type="radio" name="Yes" value="Yes" required>
+      				Yes
+      			</label>
+      			<label>
+      				<input type="radio" name="No" value="No">
+      				No
+      			</label>
+      		</div>
+      		<h2>References</h2>
+      		<div class="References">
+      			<h5>Reference Full Name</h5>
+      			<input type="text" id="RName" placeholder="Reference Name">
+      			<h5>Reference's Contact Number</h5>
+      			<input type="tel" id="RNum" placeholder="Reference Phone Number">
+      			<h5>Reference's Email</h5>
+      			<input type="email" id="REmail" placeholder="Reference Email">
+      			<h5>Relationship to Reference</h5>
+      			<input type="text" id="RRelationship" placeholder="Relationship">
+      		</div>
+      		<h2>Additional Question</h2>
+      		<div class="AQ">
+      			<textarea id="AQ" name="AQ" placeholder="Why us?" required></textarea>
+      		</div>
+      		<h2>Consent and Agreement</h2>
+      		<div class="consent">
+      			<label>
+      				<input type="radio" name="T&C" value="T&C" required>
+      				I agree to all the Terms and Conditions that the company has and am willing to follow it
+      			</label>
+      			<label>
+      				<input type="radio" name="PP" value="PP">
+      				I have read all the privacy policies and am willing to follow it 
+      			</label>
+      		</div>
+      		<div class="submitbutton">
+      			<button type="submit">Submit Application</button>
+      		</div>
+      	</form>
+      	<div id="successMessage" style="display: none;">Form submitted successfully!</div>
+      	<button onclick="viewApplications()">View Applications as Table</button>
+      	<table id="applicationsTable" style="display: none;">
+  			<thead>
+   		 		<tr>
+      				<th>Field</th>
+      				<th>Value</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+  			</tbody>
+			</table>
+      	<script src="script.js"></script>
+	</body>
