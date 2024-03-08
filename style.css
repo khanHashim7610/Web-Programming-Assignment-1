@@ -1,92 +1,117 @@
-body 
-{
-  background-color: black;
-
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
 }
-.container 
-{
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: gold;
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
-.container h1
-{
-  text-transform: uppercase;
-  color: black;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 20px auto; 
-  border: 2px solid black; 
-  padding: 10px; 
-  display: inline-block;
-
+h1 {
+    font-size: 2.5rem;
 }
-.container h2
-{
-  text-transform: uppercase;
-  color: black;
+.top {
+    color: blue !important;
 }
-.container h5
-{
-  text-transform: uppercase;
-  color: black;
+h2 {
+    font-size: 2rem;
+    color: blue;
+    font-family: 'Pacifico', cursive; 
 }
-.namee 
-{
-  margin-bottom: 15px;
+h3 {
+    font-size: 1.75rem;
 }
-.contactinfo 
-{
-  margin-bottom: 15px;
+.navbar {
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.address
-{
-  margin-bottom: 15px;
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
 }
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea 
-{
-  width: 90%; 
-  padding: 10px;
-  margin-top: 5px;
-  box-sizing: border-box; 
+.nav-link {
+    color: #333;
 }
-
-button 
-{
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  text-transform: uppercase;
+.nav-link:hover {
+    color: #007bff;
 }
-
-button:hover 
-{
-  background-color: orangered;
+.navbar-nav .nav-link {
+    color: white; 
 }
-
-#applicationsTable 
-{
-  border-collapse: collapse; 
-  width: 100%; 
+.navbar-text .btn {
+    background-color: #007bff;
 }
-
-#applicationsTable th,
-#applicationsTable td 
-{
-  border: 1px solid black; 
-  padding: 8px; 
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
 }
-
-#applicationsTable th 
-{
-  background-color: #f2f2f2; 
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+.hero-section p {
+    color: #555;
+}
+.services-section {
+    padding: 80px 0;
+}
+.services-icon {
+    width: 50px;
+    height: 50px;
+    fill: #007bff;
+}
+.services-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+.services-section p {
+    color: #555;
+}
+.quote-section {
+    padding: 80px 0;
+}
+.quote-icon {
+    width: 40px;
+    height: 40px;
+    fill: #555;
+}
+.footer-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+.bg-white {
+    color: black;
+}
+.footer-section .text-muted {
+    color: #777;
+}
+.footer-section a {
+    color: #333;
+}
+.footer-section a:hover {
+    color: #007bff;
+}
+.footer-copyright {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+}
+.navbar-nav .nav-link {
+    color: white;
+}
+.col-lg-6.order-2.order-lg-1 h1 {
+    font-family: Nunito, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar-text .btn {
+    background-color: #007bff;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.navbar-text .btn:hover {
+    background-color: green; 
+    color: white; 
+    font-weight: bolder;
+    font-style: italic;
 }
