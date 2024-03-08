@@ -1,0 +1,92 @@
+body 
+{
+  background-color: black;
+
+}
+.container 
+{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: gold;
+}
+.container h1
+{
+  text-transform: uppercase;
+  color: black;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto; 
+  border: 2px solid black; 
+  padding: 10px; 
+  display: inline-block;
+
+}
+.container h2
+{
+  text-transform: uppercase;
+  color: black;
+}
+.container h5
+{
+  text-transform: uppercase;
+  color: black;
+}
+.namee 
+{
+  margin-bottom: 15px;
+}
+.contactinfo 
+{
+  margin-bottom: 15px;
+}
+.address
+{
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea 
+{
+  width: 90%; 
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box; 
+}
+
+button 
+{
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+button:hover 
+{
+  background-color: orangered;
+}
+
+#applicationsTable 
+{
+  border-collapse: collapse; 
+  width: 100%; 
+}
+
+#applicationsTable th,
+#applicationsTable td 
+{
+  border: 1px solid black; 
+  padding: 8px; 
+}
+
+#applicationsTable th 
+{
+  background-color: #f2f2f2; 
+}
